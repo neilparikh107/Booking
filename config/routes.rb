@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :displays
   resources :customers
   root to: 'bookings#new'
   resources :bookings
