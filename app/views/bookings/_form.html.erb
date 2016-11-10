@@ -14,7 +14,7 @@
   <% end %>
 
 
-  <div class="field" >
+  <div class="form-group" >
     <strong>Type of clean:</strong>
     <div class="clin" ><%= label_tag(:cleaning_type_regular, "Regular Clean") %></div>
     <div class="clin" ><%= radio_button_tag(:cleaning_type, "regular") %></div>
@@ -22,38 +22,38 @@
     <div class="clin" ><%= radio_button_tag(:cleaning_type, "spring") %></div>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :bedrooms %>
-    <%= f.select :bedrooms,(1..6) %></div>
+    <%= f.select :bedrooms,(1..6) %>
     <%= f.label :bathrooms %>
     <%= f.select :bathrooms,(1..6) %>
   </div>
 
-<div id='extras'>
+<div class="form-group" id='extras'>
 <strong>Extras</strong>
-  <div class="field" >
+  <div class="form-group" >
     <%= f.label :in_window %>
     <%= f.check_box :in_win %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :out_win %>
     <%= f.check_box :out_win %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :fridge %>
     <%= f.check_box :fridge %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :balcony %>
     <%= f.check_box :balcony %>
   </div>
 </div>
 
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :date %>
     <%= f.date_select :date %>
   </div>
@@ -63,32 +63,32 @@
   <% pm =[] %>
   <%(1..4).each {|x| pm<<["#{x}-#{x+1}pm"] } %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :time %>
     <%= f.select :time, am + ["12-1pm"]+ pm%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :street %>
     <%= f.text_field :street %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :suburb %>
     <%= f.text_field :suburb %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :postcode %>
     <%= f.select :postcode,(2000..2999) %>
   </div>

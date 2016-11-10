@@ -5,3 +5,6 @@
  .clin{
    display: inline-block;
  }
+.form-group{
+  padding-left: 30px;
+}
