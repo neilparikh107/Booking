@@ -1,0 +1,29 @@
+<br><br><br>
+<div class="row">
+  <div class="col-md-4 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel panel-heading"><strong>New Booking</strong></div>
+      <div class="panel-body">
+
+        <%= render 'form', booking: @booking %>
+
+        <%= link_to 'Back', bookings_path %>
+      </div>
+    </div>
+
+
+  <div class="col-md-4 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel panel-heading"><strong>Summary</strong></div>
+      <div class="panel-body">
+        <div>Bedroom Cost:</div>
+          <div id='bed_cost'></div>
+        <div>Bathroom Cost:</div>
+          <div id='bath_cost'></div>
+          <div>In window Cost:</div>
+            <div id='in_window_cost'></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

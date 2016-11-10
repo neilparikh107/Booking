@@ -1,0 +1,99 @@
+
+
+<%= simple_form_for(booking) do |f| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field" >
+    <strong>Type of clean:</strong>
+    <div class="clin" ><%= label_tag(:cleaning_type_regular, "Regular Clean") %></div>
+    <div class="clin" ><%= radio_button_tag(:cleaning_type, "regular") %></div>
+    <div class="clin" ><%= label_tag(:cleaning_type_spring, "Spring Clean") %></div>
+    <div class="clin" ><%= radio_button_tag(:cleaning_type, "spring") %></div>
+  </div>
+
+  <div class="field">
+    <%= f.label :bedrooms %>
+    <%= f.select :bedrooms,(1..6) %></div>
+    <%= f.label :bathrooms %>
+    <%= f.select :bathrooms,(1..6) %>
+  </div>
+
+<div id='extras'>
+<strong>Extras</strong>
+  <div class="field" >
+    <%= f.label :in_window %>
+    <%= f.check_box :in_win %>
+  </div>
+
+  <div class="field">
+    <%= f.label :out_win %>
+    <%= f.check_box :out_win %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fridge %>
+    <%= f.check_box :fridge %>
+  </div>
+
+  <div class="field">
+    <%= f.label :balcony %>
+    <%= f.check_box :balcony %>
+  </div>
+</div>
+
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <% am =[] %>
+  <%(7..11).each {|x| am<<["#{x}-#{x+1}am"] } %>
+  <% pm =[] %>
+  <%(1..4).each {|x| pm<<["#{x}-#{x+1}pm"] } %>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.select :time, am + ["12-1pm"]+ pm%>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :street %>
+    <%= f.text_field :street %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suburb %>
+    <%= f.text_field :suburb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postcode %>
+    <%= f.select :postcode,(2000..2999) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

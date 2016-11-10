@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cleaning_Type:</strong>
+  <%= @booking.cleaning_type %>
+</p>
+
+<p>
+  <strong>In win:</strong>
+  <%= @booking.in_win %>
+</p>
+
+<p>
+  <strong>Out win:</strong>
+  <%= @booking.out_win %>
+</p>
+
+<p>
+  <strong>Fridge:</strong>
+  <%= @booking.fridge %>
+</p>
+
+<p>
+  <strong>Balcony:</strong>
+  <%= @booking.balcony %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @booking.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @booking.time %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @booking.street %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @booking.suburb %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @booking.postcode %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
